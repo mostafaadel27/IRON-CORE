@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ffffff;
+    --primary: #0066ff;
+    --primary-muted: #0052cc;
+    --primary-light: #3385ff;
+    --selection: #0066ff;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button, 
+  a, 
+  input[type="submit"], 
+  input[type="button"], 
+  [role="button"] {
+    cursor: pointer !important;
+  }
+
+  ::selection {
+    background-color: var(--selection);
+    color: white;
+  }
+}
+
+@layer components {
+  /* === TYPOGRAPHY === */
+  .heading-display {
+    font-family: var(--font-poppins);
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+    text-transform: uppercase;
+  }
+
+  .text-mono {
+    font-family: var(--font-mono);
+    letter-spacing: -0.02em;
+  }
+
+  /* === STRIPE-STYLE BORDERS & DIVIDERS === */
+  .border-subtle {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .divider-subtle {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  }
+
+  /* === GLASSMORPHISM === */
+  .glass {
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(0, 102, 255, 0.3);
+  }
+
+  /* === BUTTONS === */
+  .btn-primary {
+    background: var(--primary);
+    color: white;
+    padding: 0.875rem 1.75rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-primary:hover {
+    background: var(--primary-light);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px -5px rgba(0, 102, 255, 0.4);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: white;
+    padding: 0.875rem 1.75rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  /* === GRADIENTS === */
+  .bg-gradient-radial {
+    background: radial-gradient(circle at center, var(--primary-muted) 0%, transparent 70%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #ffffff 0%, #a3a3a3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+}
