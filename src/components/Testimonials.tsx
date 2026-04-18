@@ -103,7 +103,7 @@ export default function Testimonials() {
         <motion.div
           initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
           animate={isInView ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }}
           className="text-center mb-24"
           style={{ transformStyle: "preserve-3d" }}
         >
@@ -148,7 +148,7 @@ export default function Testimonials() {
                     rotateX: 0, 
                     z: 0 
                   } : {}}
-                  transition={{ delay: index * 0.15, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ delay: index * 0.15, duration: 1, ease: [0.16, 1, 0.3, 1] as any }}
                   whileHover={reducedMotion ? { y: -5 } : { y: -15, rotateX: -5, z: 30 }}
                   className="group/card bg-[#111]/40 backdrop-blur-2xl rounded-[3rem] p-10 border border-white/5 hover:border-primary-500/30 transition-all duration-700 shadow-[0_50px_100px_-30px_rgba(0,0,0,0.5)] flex flex-col min-h-[450px] cursor-grab active:cursor-grabbing"
                   style={{ transformStyle: "preserve-3d" }}

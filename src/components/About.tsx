@@ -32,7 +32,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }}
             className="relative"
           >
             <div className="aspect-[4/5] rounded-3xl overflow-hidden relative border border-white/10 group">
@@ -54,7 +54,7 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.5, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ delay: 0.5, duration: 0.6, ease: [0.16, 1, 0.3, 1] as any }}
               className="absolute -bottom-6 -right-6 lg:-right-12 bg-black/60 backdrop-blur-xl rounded-2xl p-6 border border-white/10"
             >
               <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400 tracking-tight">10+</div>
@@ -66,7 +66,7 @@ export default function About() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }}
           >
             <motion.div
               className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md"
@@ -99,7 +99,7 @@ export default function About() {
                   key={achievement.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ delay: 0.3 + index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ delay: 0.3 + index * 0.1, ease: [0.16, 1, 0.3, 1] as any }}
                   whileHover={{ y: -3 }}
                   className="flex items-start gap-4 p-5 bg-white/5 border border-white/10 rounded-xl transition-colors duration-300 hover:bg-white/10"
                 >

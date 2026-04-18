@@ -68,7 +68,7 @@ export default function Services() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }}
           className="text-center mb-20"
         >
           <span className="inline-block px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-white/80 font-semibold text-xs tracking-widest uppercase mb-4">
@@ -90,7 +90,7 @@ export default function Services() {
               key={program.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: index * 0.15, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ delay: index * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }}
               className={`relative bg-[#111] rounded-3xl p-8 transition-all duration-500 flex flex-col h-full 
                 ${program.popular
                   ? "border border-primary-500/50 shadow-[0_0_30px_rgba(14,165,233,0.15)] relative z-10 lg:scale-[1.03]"

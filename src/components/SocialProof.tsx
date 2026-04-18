@@ -48,7 +48,7 @@ export default function SocialProof() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }}
           >
             <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 rounded-full border border-primary-500/20 bg-primary-500/5">
               <Star size={12} className="text-primary-400 fill-primary-400" />

@@ -53,7 +53,7 @@ export default function LoadingScreen({ onComplete }: { onComplete?: () => void 
             y: -50,
             scale: 1.05,
             filter: "blur(10px)",
-            transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } 
+            transition: { duration: 1, ease: [0.16, 1, 0.3, 1] as any } 
           }}
           className="fixed inset-0 z-[9999] bg-[#050505] flex flex-col items-center justify-center overflow-hidden"
         >

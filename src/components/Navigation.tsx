@@ -27,7 +27,7 @@ export default function Navigation() {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] as any }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
           ? "bg-neutral-950/80 backdrop-blur-xl border-b border-white/5 py-4 shadow-2xl"
           : "bg-transparent py-6"

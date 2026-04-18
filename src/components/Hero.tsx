@@ -94,7 +94,7 @@ export default function Hero() {
       opacity: 1,
       y: 0,
       filter: "blur(0px)",
-      transition: { duration: isMobile ? 0 : 0.8, ease: [0.16, 1, 0.3, 1] },
+      transition: { duration: isMobile ? 0 : 0.8, ease: [0.16, 1, 0.3, 1] as any },
     },
   };
 
@@ -191,7 +191,7 @@ export default function Hero() {
               <motion.div
                 initial={{ opacity: isMobile ? 1 : 0, scale: isMobile ? 1 : 0.9, rotateY: isMobile ? 0 : 20 }}
                 animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-                transition={{ duration: isMobile ? 0 : 2.5, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: isMobile ? 0 : 2.5, ease: [0.16, 1, 0.3, 1] as any }}
                 className="relative z-10 w-full h-full rounded-[4rem] overflow-hidden border border-white/10 shadow-[0_60px_120px_-30px_rgba(0,0,0,0.9)]"
                 style={{ transform: "translateZ(80px)" }}
               >

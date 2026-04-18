@@ -62,7 +62,7 @@ export default function Results() {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }}
           >
             <span className="inline-block px-4 py-1.5 rounded-full border border-accent-500/30 bg-accent-500/10 text-accent-400 font-semibold text-xs tracking-widest uppercase mb-4">
               The Method
@@ -82,7 +82,7 @@ export default function Results() {
                  key={benefit.title}
                  initial={{ opacity: 0, x: -30 }}
                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                 transition={{ delay: 0.2 + index * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                 transition={{ delay: 0.2 + index * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] as any }}
                  className="flex gap-4 group"
                >
                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:bg-primary-900/40 group-hover:border-primary-500/30">
@@ -103,7 +103,7 @@ export default function Results() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }}
             className="relative"
           >
             <div className="relative aspect-[3/4] sm:aspect-square lg:aspect-[4/5] rounded-[2rem] overflow-hidden group border border-white/10">

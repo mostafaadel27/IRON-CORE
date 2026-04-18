@@ -82,7 +82,7 @@ export default function Programs() {
         <motion.div
           initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
           animate={isInView ? { opacity: 1, y: 0, filter: "blur(0px)" } : {}}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as any }}
           className="max-w-3xl mb-32"
           style={{ transformStyle: "preserve-3d" }}
         >
@@ -121,7 +121,7 @@ export default function Programs() {
                 rotateX: 0, 
                 z: 0 
               } : {}}
-              transition={{ delay: index * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ delay: index * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }}
               whileHover={reducedMotion ? { y: -5 } : { y: -10, rotateX: -5, rotateY: 5, z: 20 }}
               className={`group relative overflow-hidden rounded-[3rem] border transition-all duration-700 
                 ${program.popular 

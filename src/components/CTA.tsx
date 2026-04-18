@@ -50,7 +50,7 @@ export default function CTA() {
           <motion.div
             initial={{ opacity: 0, x: -50, filter: "blur(10px)" }}
             animate={isInView ? { opacity: 1, x: 0, filter: "blur(0px)" } : {}}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] as any }}
             style={{ transform: "translateZ(30px)" }}
           >
             {/* Urgency Badge (Refined) */}
@@ -91,7 +91,7 @@ export default function CTA() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9, rotateY: 20 }}
             animate={isInView ? { opacity: 1, scale: 1, rotateY: 0 } : {}}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as any, delay: 0.2 }}
             style={{ transformStyle: "preserve-3d" }}
           >
             <GlassFlare className="rounded-[4rem]">
